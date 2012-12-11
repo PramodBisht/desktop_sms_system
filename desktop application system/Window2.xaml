@@ -1,0 +1,131 @@
+﻿<Window x:Class="Pramod_sms_app.Window2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Email" Height='448' Width='488' Loaded="Window_Loaded" ResizeMode="CanMinimize" WindowState="Normal">
+    <Grid Height='386'
+		  Width='431'>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width='239*' />
+			<ColumnDefinition Width='192*' />
+		</Grid.ColumnDefinitions>
+		<TextBlock Height='23'
+				   HorizontalAlignment='Left'
+				   Margin='10,14,0,0'
+				   Name='textBlock1'
+				   Text='Username'
+				   VerticalAlignment='Top' />
+		<TextBlock Height='23'
+				   HorizontalAlignment='Left'
+				   Margin='226,14,0,0'
+				   Name='PasswordTB'
+				   Text='Password'
+				   VerticalAlignment='Top'
+				   Grid.ColumnSpan='2' />
+		<TextBlock Height='23'
+				   HorizontalAlignment='Left'
+				   Margin="10,46,0,0"
+				   Name='FromTB'
+				   Text="Server"
+				   VerticalAlignment='Top' />
+		<TextBlock Height='23'
+				   HorizontalAlignment='Left'
+				   Margin='10,73,0,0'
+				   Name='ToTB'
+				   Text='To'
+				   VerticalAlignment='Top' />
+		<TextBlock Height='23'
+				   HorizontalAlignment='Left'
+				   Margin="10,98,0,0"
+				   Name='SubjectTB'
+				   Text='Subject'
+				   VerticalAlignment='Top' />
+		<TextBlock Height='23'
+				   HorizontalAlignment='Left'
+				   Margin="10,141,0,0"
+				   Name='MessageTB'
+				   Text='Message'
+				   VerticalAlignment='Top' />
+		<StackPanel Height='225'
+					HorizontalAlignment='Left'
+					Margin='74,75,0,0'
+					Name='stackPanel1'
+					VerticalAlignment='Top'
+					Width='334'
+					Grid.ColumnSpan='2'>
+			<TextBox Name='txtTo'
+					 Background="White"
+					 Foreground="Black"
+					 TabIndex='4' />
+			<TextBox Name='txtSubject'
+					 Background="White"
+					 Foreground="Black"
+					 TabIndex='5' />
+            <TextBox Name='txtMessage'
+					 Background='WHITE'
+					 Foreground='Black'
+					 Height="154"
+					 Width='Auto'
+					 TabIndex='7' />
+		</StackPanel>
+		<TextBox Height='23'
+				 HorizontalAlignment='Left'
+				 Margin='74,11,0,0'
+				 Name='usernameTB'
+				 VerticalAlignment='Top'
+				 Width='120'
+				 Background="White"
+				 Foreground="Black"
+				 TabIndex='1' />
+		<Button Background='#FF262E2E'
+				BorderBrush='#FF9BA6B7'
+				Content='Send with attachment'
+				Foreground='White'
+				HorizontalAlignment='Left'
+				Margin="63,346,0,12"
+				Name='SendButton'
+				Width='131' Click='SendButton_Click'
+				TabIndex='9' Visibility="Hidden" />
+		<Button Background='#FF262E2E'
+				BorderBrush='#FF9BA6B7'
+				Content="Send "
+				Foreground='White'
+				HorizontalAlignment='Left'
+				Margin="49,346,0,12"
+				Name='AttachmentButton'
+				Width='131'
+				Click='AttachmentButton_Click'
+				TabIndex='8' Grid.Column="1" />
+		<TextBlock Height='23'
+				   HorizontalAlignment='Left'
+				   Margin='10,112,0,0'
+				   Name='textBlock2'
+				   Text='Path'
+				   VerticalAlignment='Top' Visibility="Hidden" />
+		<ComboBox Height='23'
+				  HorizontalAlignment='Left'
+				  Margin="74,46,0,0"
+				  Name='comboBox1'
+				  VerticalAlignment='Top'
+				  Width='120'
+				  Background="White"
+				  Foreground='Black'
+				  TabIndex='3'
+				  IsReadOnly='False' SelectionChanged="comboBox1_SelectionChanged">
+			<ComboBoxItem Content='Gmail'
+						  Background='White'
+						  Foreground='Black' />
+			<ComboBoxItem Content='Hotmail' />
+		</ComboBox>
+		<PasswordBox Grid.Column='1'
+					 Height='23'
+					 HorizontalAlignment='Left'
+					 Margin='49,12,0,0'
+					 Name='passwordBox1'
+					 VerticalAlignment='Top'
+					 Width='120'
+					
+					 Background="White"
+					 Foreground="Black" PasswordChanged="passwordBox1_PasswordChanged" />
+        <TextBox Name='pathTB' Background="White" Foreground="Black" TabIndex='6' Visibility="Hidden" Grid.ColumnSpan="2" Margin="63,306,34,58" />
+    </Grid>
+</Window>
