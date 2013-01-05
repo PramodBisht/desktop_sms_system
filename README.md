@@ -7,6 +7,16 @@ is implemented using the c# and wpf.
 you are first require to create the account at 160by2.com/ way2sms.com
 
 
+
+
+
+
+
+
+
+
+
+
 This is code is under MIT license
 Copyright (c) 2012 Pramod Bisht
 
